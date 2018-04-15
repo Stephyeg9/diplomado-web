@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*
 esto es un comentario
 */
@@ -18,11 +17,116 @@ p.ejemplo. Para establecer el color rojo en las etiquetas de parrafo sería de l
 p {
 	color: #F00;
 }
+	selectores básicos:
+		1. Por etiqueta: se escribe únicamente el nombre de la etiqueta.
+
+              p {
+			  color: #00f;
+               }
+		2. Por clase: se escribe un "." seguido del valor del atributo "class".
+			siempre utulizar selectores por clase para poder reciclar reglas. 
+				.font-blue´{
+				color: #00f;
+				}
+		3. Por identificador: se escribe un "#" seguido del valor del atributo "id".
+			no se deberían crear selectores por "id" ya que las reglas css no se podrían reciclar
+				#font-blue{
+				color:#00f;
+				}
+  		Convenciones para los valore de atributo "class".
+			1. Siempre en minusculas.
+			2. Palabras separadas por guion medio. 
+			3. No espacios ni caracteres especiales.
+				ejemplo: 	
+  					.section-font-blue{...}
+
+		Convenciones para los valores de atributo "id":
+			1. utilizar formato Camer Case Lowecase, es decir:
+				-No espacios
+				-Primer palabra en minusculas.
+				-A partir de la segunda palabra con inicial mayuscula. 
+					EJEMPLO:
+						#sectionFontBlue{...}
+
+			Selectores descendientes: EJEMPLO:  
+				.page-header h1{
+				marge
+							}
+
+						tu le indicas la posicion del elemento al cual se le tiene que aplicar una determinada propiedad.
+						el h1 debe estar dentro de un atributo .page-header, 
+
 */
+
+body {
+	margin: 0px;
+}
 .container {
 	max-width: 1200px;
 	/*
 	para centrar elemento de bloque, tenemos que establecer un márgen automático a la izquierda y también a la derecha.
 	*/
 	margin: 0 auto;
+}
+#mainContainer {
+	background-color: #25B607;
+}
+.page-header {
+	height: 300px;
+	padding: 25px;
+	background: transparent url("../images/img01.jpg") no-repeat center center;
+}
+.page-header h1 {
+	margin: 0;
+	font-family: arial;
+	font-size: 30px;
+	font-weight: normal;
+	color: #fff;
+	text-shadow: 1px 1px 4px #f00;
+}
+.page-nav {
+	background-color: #666;
+}
+.page-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.page-nav li{
+	display: inline-block;
+}
+.page-nav a {
+	display: block;
+	background-color: #666;
+	padding: 10px 20px;
+	font-family: arial;
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ccc;
+	transition: all .3s;
+}
+.page-nav a:hover {
+	background-color: #333;
+	color: #fff;
+}
+.page-main {
+	font-family: arial;
+	line-height: 1.8;
+}
+.page-main img{
+	max-height: 300px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 12px #f00;
+}
+.page-footer {
+	background-color: #666;
+	padding: 16px;
+}
+.page-footer p{
+	margin: 0;
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	color: #ccc;
 }
