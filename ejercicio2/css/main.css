@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/* Fonts */
+@import url("lib/fontawesome-all.min.css");
+@import url("lib/font-serch.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+/* General */
+@import url("lib/normalize.css");
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Header */
+.page-header {
+    position: relative;
+}
+.page-header h1 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 300;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0 0 8px #666;
+}
+
+/* Nav */
+.page-nav {
+    background-color: #333;
+}
+.page-nav li {
+    float: left;
+}
+.page-nav a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all .3s;
+    /*
+        transition: recibe una lista de propiedades a transicionar.
+            Cada propiedad de la lista debe tener especificado el tiempo de transición,
+            el cual puede ser en segundos (s) o milisegundos (ms).
+        
+            sintaxis:
+            transition: [propiedad tiempo], ...;
+            transition: background-color 300ms;
+            transition: background-color .3s;
+            transition: background-color .3s, color .5s;
+            transition: all .3s;
+    */
+}
+.page-nav a:hover {
+    background-color: #666;
+    color: #fff;
+    /* font-size: 20px; */
+}
+.page-nav .fa-search {
+    color: #ccc;
+    float: right;
+    margin: 10px 20px 0;
+    cursor: pointer;
+}
+
+/* Main */
+.page-main {
+    padding: 65px 0;
+}
+.page-main h2:first-child {
+    margin-top: 0;
+}
+
+/* Grid */
+.grid .col-left {
+    float: left;
+    width: 33.33%;
+}
+.grid .col-right {
+    padding-left: 16px;
+    float: right;
+    width: 66.66%;
+    box-sizing: border-box;
+    /*
+        box-sizing: valor por defecto "content-box".
+            content-box: Ancho del contenido es únicamente el contenido,
+                es decir, que los valores de "margin", "padding" y "border" se
+                sumarán.
+
+            border-box: Ancho del contenido es la suma de "contenido" + "padding" + "border".
+                es decir, que los valores de "padding" y "border" se toman del ancho establecido.
+    */
+}
+
+/* Footer */
+.page-footer {
+    background-color: #333;
+    padding: 16px 0;
+}
+.page-footer p {
+    margin: 0;
+    text-align: center;
+    color: #ccc;
+}
+
+/* Helpers */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+}
+.clearfix:after {
+    clear: both; /* [both | left | right] */
+}

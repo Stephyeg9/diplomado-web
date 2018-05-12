@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'serch';
+  src:  url('../fonts/serch.eot?iz5ceo');
+  src:  url('../fonts/serch.eot?iz5ceo#iefix') format('embedded-opentype'),
+    url('../fonts/serch.ttf?iz5ceo') format('truetype'),
+    url('../fonts/serch.woff?iz5ceo') format('woff'),
+    url('../fonts/serch.svg?iz5ceo#serch') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'serch' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star:before {
+  content: "\e900";
+  font-weight: 700;
+}
+.icon-box:before {
+  content: "\e901";
+}
+.icon-pacman:before {
+  content: "\e916";
+}
