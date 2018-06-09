@@ -54,6 +54,49 @@ $(function () {
         -- Decremento 
                                              // VAR es una palabra reservada que se utiliza para crear una variable en java
 
+        3. Operadores relacionales: Siempre van a devolver un valor booleano (BOOLEAN) es decir va a ver un true o false
+            > Mayor que
+            < Menor que 
+            == Igual que
+            === exactamente igual a 
+            >= Mayor o igual que 
+            <= Menor o igual que 
+            != Diferente a
+            !== Exáctamente diferente a 
+
+        4. Operadores lógicos: Siempre van a devolver un valor booleano (BOOLEAN). Es decir va a ver un true o false
+        && AND 
+                true && true    -> true 
+                true && false   -> false
+                false && true   -> false
+                false && false  -> false 
+        || OR 
+                true || true    -> true
+                true || false   -> true
+                false || true   -> true
+                false || false  -> false 
+
+        5. Estructura de control "if else" 
+            Sintaxis:
+                    if (condicional) {
+                        La condicional debe ser un valor booleano (boolean),
+                        Si la condicional es igual a true entonces se ejecuta el código
+                        que esté dentro de estas llaves. 
+                    } else {
+                        -Si la condicional es igual a false, entonces se ejecuta el código
+                        que este dentro de estas llaves. 
+                    }
+
+        6. Interador "for"
+                    Sintaxis:
+
+                        for (var i = 0; i < 10; i++){
+                            código que se ejecuta en cada interacción.
+                        }
+
+
+            
+
  */  
 
     // STRING
@@ -122,7 +165,7 @@ $(function () {
 
         var diasSemana = ['Lunes' , 'Martes' , 'Miércoles' , 'Jueves' , 'Viernes' , 'Sábado' , 'Domingo'];
         var numeroDiasSemana = diasSemana.length;
-        var position = 1;
+        var position = 0;
             //console.log(diasSemana);
             //console.log(numeroDiasSemana);
 
@@ -204,20 +247,20 @@ $(function () {
 
         //UNA LISTA DESORDENADA, SON DOS ELEMENTOS LOS QUE VAMOS A USAR, 
 
-        var ul = document.createElement('ul');
-        var li1 = document.createElement('li');
-        var li2 = document.createElement('li');
-        var li3 = document.createElement('li');
-        var li4 = document.createElement('li');
-        var li5 = document.createElement('li');
+        // var ul = document.createElement('ul');
+        // var li1 = document.createElement('li');
+        // var li2 = document.createElement('li');
+        // var li3 = document.createElement('li');
+        // var li4 = document.createElement('li');
+        // var li5 = document.createElement('li');
 
-        $(li1).append(triangulo1);
-        $(li2).append(triangulo1);
-        $(li3).append(triangulo1);
-        $(li4).append(triangulo1);
-        $(li5).append(triangulo1);
-        $(ul).append(li1, li2, li3, li4, li5);
-        areas.append(ul);
+        // $(li1).append(triangulo1);
+        // $(li2).append(triangulo1);
+        // $(li3).append(triangulo1);
+        // $(li4).append(triangulo1);
+        // $(li5).append(triangulo1);
+        // $(ul).append(li1, li2, li3, li4, li5);
+        // areas.append(ul);
 
         //OBJECT  (podemos guardar muchos valores, la diferencia es que le podemos asignar un nombre a cada propiedad)
 
@@ -275,9 +318,183 @@ $(function () {
 
        
 
-       
- 
+    var numero5= 10;
+    var numero6= 20;
+    var numero7= 6;
+    var numero8= 4;
+    var texto8 = 4;
+    var resultado1= numero5  < numero6;
+    var resultado2= numero6 == (numero5 + numero7 + numero8);
+    //console.log(resultado1);
+    //console.log(resultado2);
+    var resultado3 = numero8 != texto8;
+    var resultado4 = numero8 !==texto8;
 
+    //console.log('Diferente a', resultado3);
+    //console.log('Exactamete diferente a:', resultado4);
+
+    var isMexican = true;
+    var isHappy = false;
+
+    var isAcceptInFrance = isMexican && isHappy;
+    var isAcceptInEU = isMexican || isHappy;
+
+    //console.log('Es aceptado en Francia:' , isAcceptInFrance);
+    //console.log('Es aceptado en EU:', isAcceptInEU);
+
+
+    // if (isMexican && isHappy) {
+    //     console.log('Es aceptado den Francia');
+    // } else {
+    //     console.log('No aceptado en Francia');
+    // }
+ 
+    // for(var i = 0; 
+    //     i < numeroDiasSemana; 
+    //     i++
+    // ){
+       
+    //    console.log('El día actual es: ', diasSemana[i]);
+    // }
 
     
+    var values = [
+        { base: 100, height: 200 },
+        { base: 105, height: 350 },
+        { base: 3876, height: 1984},
+        { base: 245.34, height: 54.12},
+        { base: 1254.23, height:7463.45},
+    ];
+
+    var areaValues = [];
+    var ul = document.createElement('ul');
+
+    for(var i = 0; i < values.length; i++) {
+        var currentArea =calcularArea(values[i].base, values [i].height);
+        areaValues.push(currentArea);
+
+
+    }
+
+    for(var i = 0; i < areaValues.length; i++){
+        var li = document.createElement('li');
+        $(li).append(areaValues[i]);
+        $(ul).append(li);
+    }
+
+        //console.log(ul);
+
+        areas.append(ul);
+
+        /*
+            Eventos: 
+                -click 
+                -mouseenter 
+                -mouseleave
+                -scroll 
+
+            Método ".on()" de jQuerry: Permite escuchar eventos que se desencadenan en un
+                    elemento HTML en particular. 
+
+                    Sintaxis:
+                        Recibe dos parámetros:
+                            1. el EVENTO QUE QUEREMOS escuchar
+                            2. la funcion que anonioma que se va a ejecutar
+                            cuando suceda el evento en dicho elemento. 
+
+                        o 
+
+                        Recibe un parámetro: 
+                            1. un objeto con pares (evento y función a ejecutar)
+
+                        elemento.on(evento, fn);
+                        elementoHTML.on('click', function(){ ...code});
+
+            Método ".css()" de jQuerry: Permite modificar estilos CSS. 
+
+                Sintaxis: 
+                    Recibe dos parámetros:
+                        1. La propiedad CSS que se quiere modificar.
+                        2. El nuevo valor de dicha propiedad. 
+
+                     Recibe un parámetro: 
+                            1. un objeto con pares (propiedad, valor)
+
+
+                elemntoHTML.css(propiedad, valor);
+                ementoHTML.css ('color' , '#f00');
+
+            Método ".attr()" de jQuerry:
+                1. si se pasa un solo parámetro, éste parámetro debe ser el nombre de un atributo de elemento
+                y entonces devolverá el valor de este atributo. 
+
+                2. Si se pasan 2 parámetros, el primero debe ser el nombre del atributo que queremos modificar
+                y el segundo el nuevo valor de este atributo. 
+
+            Sintaxis:
+                elementoHTML.attr('src'); -> Esto devolverá el valor del atributo "src"
+
+                elemento.attr('src', 'image/001.jpg'); -> Esto cambiará el valor del atributo "src" por "image/001.jpg".
+
+
+            
+
+
+        */
+
+        var myButton = $('#myButton');
+        var myWindow = $(window);
+
+
+        // myButton.on('click', function(){
+        //     console.log('Hice click sobre mi botón');
+        // });
+
+        // myButton.on('mouseenter', function(){
+        //     console.log('Estoy sobre el botón');
+        // });
+
+        // myButton.on('mouseleave', function(){
+        //     console.log('Estoy fuera del botón');
+        // });
+
+        var macImage = $('#macImage');
+         //console.log(macImage);
+
+        // var macImageSrc = macImage.attr('src');
+        // console.log(macImageSrc);
+
+        myButton.on({
+            click: function() {
+                macImage.attr('src', 'images/050.jpg');
+            },
+            mouseenter: function() {
+                myButton.css({
+                    'background-color': '#f00',
+                    'color': '#ff0',
+
+                });
+            },
+            mouseleave: function () {
+                $(this).css({
+                    'background-color': '#555',
+                    'color': '#ddd', 
+                });
+            },
+
+        });
+
+      
+
+        myWindow.on('scroll', function(){
+            var positionScroll = $(this).scrollTop();
+            var newSrc = 'images/0'+ positionScroll + '.jpg';
+
+            if (positionScroll <= 74){
+                macImage.attr('src' , newSrc);
+            }
+            macImage.attr('src', newSrc);
+        });
+
+
 });
