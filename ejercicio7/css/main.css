@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/* Fonts */
+@import url("lib/fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+/* General */
+@import url("lib/normalize.css");
+@import url("lib/grid.css");
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+strong {
+    font-weight: 700;
+}
+figure {
+    margin: 0;
+}
+
+/* Header */
+.page-header {
+    background: #666 url("../images/world-cup-header.jpg") no-repeat fixed center center;
+    background-size: cover;
+    padding: 100px 0;
+    position: relative;
+}
+.page-header:before {
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+}
+
+.page-header h1 {
+    margin: 0 0 25px;
+    font-size: 38px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 10px #555;
+    position: relative;
+}
+.page-header__intro {
+    position: relative;
+    color: #fff;
+}
+.page-header__intro h2 {
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+.page-header__intro p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+
+/* Nav */
+.page-nav {
+    background: url("../images/bg-pattern.png");
+    padding: 25px 0;
+}
+.page-nav li {
+    float: left;
+}
+.page-nav li + li {
+    margin-left: 20px;
+}
+.page-nav a {
+    display: block;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Main */
+.page-main h2 {
+    font-size: 30px;
+    color: #0f4583;
+    font-weight: 600;
+}
+.page-section {
+    padding: 45px 0;
+}
+
+/* Footer */
+
+/* Card */
+.card {
+    padding: 25px;
+    border-radius: 4px;
+}
+.card--primary {
+    background-color: rgba(255, 255, 255, .3);
+}
+.card--secondary {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* Card Info */
+.card-info {
+    box-shadow: 0 0 4px #999;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.card-info__header {
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+.card-info h3,
+.card-info__section,
+.card-info__footer {
+    padding: 16px;
+}
+.card-info h3 {
+    margin: 0;  
+}
+.card-info__section {
+    min-height: 160px;
+}
+.card-info__section :first-child {
+    margin-top: 0;
+}
+.card-info__footer {
+    text-align: center;
+    border-top: 1px solid #f2f2f2;
+}
+
+/* Card current match */
+
+.card-current-match {
+    border: 1px solid #06366d;
+    border-radius: 4px;
+}
+.card-current-match__header, 
+.card-current-match__content {
+    padding: 25px;
+}
+.card-current-match__header {
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2
+}
+.card-current-match__header h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    color: #999
+}
+.card-current-match__list li {
+    margin-bottom: 5px;
+}
+
+.card-current-match_content{
+    
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .3s;
+}
+.btn--fluid {
+    width: 100%;
+}
+.btn--primary {
+    border: 1px solid #fff;
+}
+.btn--primary:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+.btn--secondary {
+    background-color: #0f4583;
+}
+.btn--secondary:hover {
+    background-color: #06366d;
+}
+
+/* Helpers */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+}
+.clearfix:after {
+    clear: both;
+}
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.hide {
+    display: none;
+}
+
+
+.loading {
+    position: relative;
+
+}
+.loading:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .7);
+}
+.loading:after{
+    content:'';
+    display: block;
+    width: 46px;
+    height: 46px;
+    border: 5px solid transparent;
+    border-top-color: #666;
+    border-bottom-color: #666;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -23px;
+    margin-left: -23px;
+    border-radius: 50%;
+    animation: loading 1.2s linear infinite;
+
+}
+
+   
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
