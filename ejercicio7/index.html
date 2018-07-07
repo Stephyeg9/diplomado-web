@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Template</title>
+    <link rel="stylesheet" href="css/plugins/lightbox.min.css" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -139,8 +140,58 @@
                             <h2>Groups</h2>
                         </div>
                         <div class="col col-tb-8">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, harum aut ea facilis sint in molestias asperiores corrupti quasi omnis tenetur laborum, qui nam, aperiam repudiandae voluptatum. Quis, quo officiis. Odio, architecto numquam accusantium voluptate nobis sapiente sit laborum optio, dolore mollitia voluptatibus earum ipsa distinctio libero temporibus corporis iusto eum excepturi autem aperiam fugit magnam cum, eius quia. Numquam accusamus ullam porro vel placeat eveniet distinctio incidunt at sint iure itaque deserunt facilis odio dolore sit assumenda, architecto possimus et obcaecati tempore repellat provident cupiditate facere! Veritatis placeat ab, repellendus dolorem, voluptates odio officiis fugit ipsam libero odit numquam!</p>
-                            <p>Est sint doloremque, odit nostrum ducimus eveniet animi earum, nihil corrupti et ut praesentium nobis sunt dolorem vero tempore quae voluptate iure at. Debitis aspernatur recusandae expedita facere nobis vitae mollitia omnis atque? Ducimus tenetur nulla reprehenderit quam est dolore blanditiis delectus inventore repudiandae praesentium, unde enim aliquam quisquam sapiente. Deleniti voluptatibus nobis quisquam quaerat voluptatum asperiores! Unde vel atque rem ea cumque quasi repellendus dolores praesentium exercitationem a! Velit ab modi mollitia exercitationem ipsum optio vel sit, necessitatibus cupiditate numquam dolores fugiat vero praesentium, beatae laudantium dolorum delectus sed nam animi assumenda. Assumenda nam, repellendus id cum iste consequuntur!</p>
+                            <table class="table">
+                                <caption> Grupo A</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Equipo</th>
+                                        <th>Juegos Jugados</th>
+                                        <th>Juegos Ganados</th>
+                                        <th>Juegos Perdidos</th>
+                                        <th>Juegos Empatados</th>
+                                        <th>Puntos</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="5">Total Puntos</th>
+                                        <td>20</td>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td>Uruguay</td>
+                                        <td colspan="2">3</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rusia</td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arabia Saudita</td>
+                                        <td rowspan="2">3</td>
+                                        <td>1</td>
+                                        <td colspan="2" rowspan="2">2</td>
+                                        <td>3</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>Egipto</td>
+                                        <td>0</td>
+                                       
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
                         </div>
                     </div>
                 </div>
@@ -152,8 +203,68 @@
                             <h2>Players</h2>
                         </div>
                         <div class="col col-tb-8">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, harum aut ea facilis sint in molestias asperiores corrupti quasi omnis tenetur laborum, qui nam, aperiam repudiandae voluptatum. Quis, quo officiis. Odio, architecto numquam accusantium voluptate nobis sapiente sit laborum optio, dolore mollitia voluptatibus earum ipsa distinctio libero temporibus corporis iusto eum excepturi autem aperiam fugit magnam cum, eius quia. Numquam accusamus ullam porro vel placeat eveniet distinctio incidunt at sint iure itaque deserunt facilis odio dolore sit assumenda, architecto possimus et obcaecati tempore repellat provident cupiditate facere! Veritatis placeat ab, repellendus dolorem, voluptates odio officiis fugit ipsam libero odit numquam!</p>
-                            <p>Est sint doloremque, odit nostrum ducimus eveniet animi earum, nihil corrupti et ut praesentium nobis sunt dolorem vero tempore quae voluptate iure at. Debitis aspernatur recusandae expedita facere nobis vitae mollitia omnis atque? Ducimus tenetur nulla reprehenderit quam est dolore blanditiis delectus inventore repudiandae praesentium, unde enim aliquam quisquam sapiente. Deleniti voluptatibus nobis quisquam quaerat voluptatum asperiores! Unde vel atque rem ea cumque quasi repellendus dolores praesentium exercitationem a! Velit ab modi mollitia exercitationem ipsum optio vel sit, necessitatibus cupiditate numquam dolores fugiat vero praesentium, beatae laudantium dolorum delectus sed nam animi assumenda. Assumenda nam, repellendus id cum iste consequuntur!</p>
+                            <ul class="gallery">
+                                <li class="gallery__item">
+                                    <a
+                                        href="images/wc-1.jpg" 
+                                        data-lightbox="gallery-1" 
+                                        data-title="cup 2018" 
+                                        data-alt="Visit Rusia"
+                                    >
+                                        <img src="images/wc-1.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a
+                                        href="images/wc-3.jpg" 
+                                        data-lightbox="gallery-1" 
+                                        data-title="cup 2018" 
+                                        data-alt="Visit Rusia"
+                                    >
+                                        <img src="images/wc-3.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                        <a
+                                            href="images/wc-4.jpg" 
+                                            data-lightbox="gallery-1" 
+                                            data-title="cup 2018" 
+                                            data-alt="Visit Rusia"
+                                        >
+                                            <img src="images/wc-4.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="gallery__item">
+                                            <a
+                                                href="images/wc-5.jpg" 
+                                                data-lightbox="gallery-1" 
+                                                data-title="cup 2018" 
+                                                data-alt="Visit Rusia"
+                                            >
+                                                <img src="images/wc-5.jpg" alt="" />
+                                            </a>
+                                        </li>
+                                        <li class="gallery__item">
+                                                <a
+                                                    href="images/wc-6.jpg" 
+                                                    data-lightbox="gallery-1" 
+                                                    data-title="cup 2018" 
+                                                    data-alt="Visit Rusia"
+                                                >
+                                                    <img src="images/wc-6.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                            <li class="gallery__item">
+                                                    <a
+                                                        href="images/wc-2.jpg" 
+                                                        data-lightbox="gallery-1" 
+                                                        data-title="cup 2018" 
+                                                        data-alt="Visit Rusia"
+                                                    >
+                                                        <img src="images/wc-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -165,8 +276,45 @@
                             <h2>Destination</h2>
                         </div>
                         <div class="col col-tb-8">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, harum aut ea facilis sint in molestias asperiores corrupti quasi omnis tenetur laborum, qui nam, aperiam repudiandae voluptatum. Quis, quo officiis. Odio, architecto numquam accusantium voluptate nobis sapiente sit laborum optio, dolore mollitia voluptatibus earum ipsa distinctio libero temporibus corporis iusto eum excepturi autem aperiam fugit magnam cum, eius quia. Numquam accusamus ullam porro vel placeat eveniet distinctio incidunt at sint iure itaque deserunt facilis odio dolore sit assumenda, architecto possimus et obcaecati tempore repellat provident cupiditate facere! Veritatis placeat ab, repellendus dolorem, voluptates odio officiis fugit ipsam libero odit numquam!</p>
-                            <p>Est sint doloremque, odit nostrum ducimus eveniet animi earum, nihil corrupti et ut praesentium nobis sunt dolorem vero tempore quae voluptate iure at. Debitis aspernatur recusandae expedita facere nobis vitae mollitia omnis atque? Ducimus tenetur nulla reprehenderit quam est dolore blanditiis delectus inventore repudiandae praesentium, unde enim aliquam quisquam sapiente. Deleniti voluptatibus nobis quisquam quaerat voluptatum asperiores! Unde vel atque rem ea cumque quasi repellendus dolores praesentium exercitationem a! Velit ab modi mollitia exercitationem ipsum optio vel sit, necessitatibus cupiditate numquam dolores fugiat vero praesentium, beatae laudantium dolorum delectus sed nam animi assumenda. Assumenda nam, repellendus id cum iste consequuntur!</p>
+                            <div class="tabs">
+                                <div class="tabs__menu">
+                                    <div class="tabs__item tabs__item-1 active">FRANCIA 98</div>
+                                    <div class="tabs__item tabs__item-2">COREA-JAPÓN 2002 </div>
+                                    <div class="tabs__item tabs__item-3">ALEMANIA 2006</div>
+                                    <div class="tabs__item tabs__item-3">SUDÁFRICA 2010 </div>
+                                </div>
+                                <div class="tabs__contents">
+                                    <div class="tabs__content tabs__content-1 active">
+                                        <h3>En Francia 1998, Manolo Lapuente llamó al mismo número de jugadores (22): Jorge Campos, Claudio Suárez, Joel Sánchez, 
+                                            Germán Villa, Duilio Davino, Marcelino Bernal, Ramón Ramírez, Alberto García Aspe, Ricardo Peláez, Luis García, Cuauhtémoc 
+                                            Blanco, Oswaldo Sánchez, Pável Pardo, Raúl Rodrigo Lara, Luis Hernández, Isaac Terrazas, Francisco Palencia, Salvador Carmona, 
+                                            Braulio Luna, Jaime Ordiales, Jesús Arellano y Óscar Pérez.Solo seis volvieron a repetir el ciclo mundialista: Jorge Campos; 
+                                            Claudio Suárez, Ramón Ramírez, Marcelino Bernal, Alberto García Aspe, Luis García.</h3>
+                                    </div>
+                                    <div class="tabs__content tabs__content-2">
+                                        <h3>En 2002, Javier Aguirre convocó a 23 jugadores: Óscar Pérez, Francisco Gabriel de Anda, Rafael García, Rafael Márquez, Manuel Vidrio, 
+                                            Gerardo Torrado, Ramón Morales, Alberto García-Aspe, Jared Borgetti, Cuauhtémoc Blanco, Braulio Luna, Oswaldo Sánchez, Sigifredo Mercado, 
+                                            Germán Villa, Luis Hernández, Salvador Carmona, Francisco Palencia, Johan Rodríguez, Gabriel Caballero, Melvin Brown, Jesús Arellano, 
+                                            Alberto Rodríguez y Jorge Campos.</h3>
+                                    </div>
+                                    <div class="tabs__content tabs__content-3">
+                                        <h3>La Volpe dirigió al Tri en Alemania 2006 con estos 23 elementos: Claudio Suárez, Carlos Salcido, Rafael Márquez, Ricardo Osorio, Gerardo Torrado,
+                                             Sinha, Pável Pardo, Jared Borgetti, Guillermo Franco, Ramón Morales, Gonzalo Pineda, José Antonio Castro, Mario Méndez, Francisco Fonseca, 
+                                             Andrés Guardado, Omar Bravo, Rafael García, Jesús Arellano, Francisco Rodríguez, Luis Ernesto Pérez, Oswaldo Sánchez, Jesús Corona y Guillermo 
+                                             Ochoa.De los 23 que el argentino llevó, siete estuvieron con el 'Vasco' en Asia: Oswaldo Sánchez; Rafael García, Rafael Márquez, Gerardo Torrado, 
+                                             Ramón Morales, Jared Borgetti, Jesús Arellano.</h3>
+                                    </div>
+                                    <div class="tabs__content tabs__content-4">
+                                            <h3>Nuevamente Aguirre tomó las riendas de la selección mexicana para el Mundial de Sudáfrica 2010, con estos 23 futbolistas: Óscar Pérez,
+                                                 Guillermo Ochoa, Luis Ernesto Michel, Francisco Rodríguez, Carlos Salcido, Rafael Márquez, Ricardo Osorio, Paul Aguilar, Héctor Moreno, 
+                                                 Efraín Juárez, Jonny Magallón, Jorge Torres Nilo, Gerardo Torrado, Pablo Barrera, Israel Castro, Giovani, Andrés Guardado, Alberto Medina,
+                                                  Guillermo Franco, Cuauhtémoc Blanco, Carlos Vela, Javier Hernández y Adolfo BautistaEl Vasco repitió a siete futbolistas que estuvieron con 
+                                                  La Volpe: Guillermo Ochoa; Carlos Salcido, Ricardo Osorio, Guillermo Franco, Andrés Guardado, Francisco Rodríguez, Rafael Márquez.</h3>
+    
+                                            
+                                        </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,7 +335,7 @@
         </main>
         <footer class="page-footer">
             <div class="container">
-                <p>Todos los derechos reservados | eduMac 2018 | Sergio Pg</p>
+                <p>Todos los derechos reservados | eduMac 2018 | Stephanie Enríquez</p>
             </div>
         </footer>
     </div>
@@ -196,6 +344,7 @@
         <script src="js/lib/jquery-3.3.1.min.js"></script>
         <script src="js/plugins/jquery.sticky.js"></script>
         <script src="js/plugins/jquery.flexslider-min.js"></script>
+        <script src="js/plugins/lightbox.js"></script>
         <script src="js/main.js"></script>
     </div>
     <script id="cardTemplate" type="text/x-handlebars-template">

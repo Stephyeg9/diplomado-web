@@ -16,6 +16,12 @@ $(function () {
         cardTemplate = $('#cardTemplate').html(),
         cardContent = $('#cardContent');
 
+
+    var tabsItems=$('.tabs__item');
+    var tabsContents = $('.tabs__content');
+
+
+
             //para quitar la variable
             //var pageNav = $('#pageNav');
             //var currentMatchHomeTeam = $('#currentMatchHomeTeam');
@@ -34,6 +40,7 @@ $(function () {
     // Statements
     pageNav.sticky({
         //topSpacing: 25,
+        zIndex: 10,
     });
 
     var template = Handlebars.compile(cardTemplate);
@@ -99,11 +106,30 @@ $(function () {
     
         
       
+    // Lightbox configuracion 
+    lightbox.option({
+        albumLabel: "Esta es la imagen  %1 of %2",
+        disableScrolling: true, 
+        positionFromTop: 100,
+        fadeDuration: 1200,
+        imageFadeDuration: 5000,
 
-    
+    });
 
+// TABS ITEM- tabs component
+tabsItems.on('click' , function() {
+    //se obtiene el numero de indice que ocupa el item al que le hacemos clic.
+    var indexItem = tabsItems.index(this);
+ 
 
+    //Se elimina la clase "active! a todos los elemtentos"
+    tabsItems.removeClass('active');
+
+    //Se elimina la clase "active! a todos los elemtentos"
+    tabsContents.removeClass('active');
+
+    //Se añade la clase "active" al item sobre el que se hace click
+   $(this).addClass('active');
+   $(tabsContents[indexItem]).addClass('active');
+})
 });
-
-
-    
